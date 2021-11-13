@@ -16,23 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APR-o4-NQG">
-                                <rect key="frame" x="173.5" y="459.5" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="runTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTa-MS-Db1"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7xr-ir-I9O">
+                                <rect key="frame" x="79" y="431" width="256" height="88"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of UIGestureRecognizers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1r-Bm-BU7">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzj-dL-LXw">
+                                        <rect key="frame" x="123" y="28.5" width="10.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APR-o4-NQG">
+                                        <rect key="frame" x="94.5" y="57" width="67" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="runTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTa-MS-Db1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="APR-o4-NQG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="R2z-j1-dZA"/>
-                            <constraint firstItem="APR-o4-NQG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Uzd-x2-CMc"/>
+                            <constraint firstItem="7xr-ir-I9O" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="MwO-y3-bz4"/>
+                            <constraint firstItem="7xr-ir-I9O" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aVu-vA-TRl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Test" id="eqs-TW-XEb"/>
+                    <connections>
+                        <outlet property="outputLabel" destination="Rzj-dL-LXw" id="pea-xB-NPQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
