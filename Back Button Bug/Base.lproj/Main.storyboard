@@ -18,26 +18,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7xr-ir-I9O">
-                                <rect key="frame" x="79" y="431.5" width="256" height="87"/>
+                                <rect key="frame" x="58.5" y="393.5" width="297" height="163"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of UIGestureRecognizers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1r-Bm-BU7">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="20.5"/>
+                                        <rect key="frame" x="20.5" y="0.0" width="256" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzj-dL-LXw">
-                                        <rect key="frame" x="123" y="28.5" width="10.5" height="20.5"/>
+                                        <rect key="frame" x="143.5" y="28.5" width="10.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APR-o4-NQG">
-                                        <rect key="frame" x="45" y="57" width="166" height="30"/>
+                                        <rect key="frame" x="67.5" y="57" width="162" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Modify Bar Button Items"/>
+                                        <state key="normal" title="Change Title 100 Times"/>
                                         <connections>
-                                            <action selector="runTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTa-MS-Db1"/>
+                                            <action selector="changeTitle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iuw-aC-vF1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQj-y1-S9z">
+                                        <rect key="frame" x="0.0" y="95" width="297" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Change Right Bar Items as Array 100 Times"/>
+                                        <connections>
+                                            <action selector="changeRightBarItemsAsArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wD5-MT-iTO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9o-WM-pfk">
+                                        <rect key="frame" x="3.5" y="133" width="290" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Change Right Bar Items as Item 100 Times"/>
+                                        <connections>
+                                            <action selector="changeRightBarItemsAsItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCU-v8-o9P"/>
                                         </connections>
                                     </button>
                                 </subviews>

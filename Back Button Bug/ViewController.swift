@@ -14,14 +14,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func runTest(_ sender: Any) {
-        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+    @IBAction func changeTitle(_ sender: Any) {
+        for i in 0..<100 {
+            navigationItem.title = "Change \(i)"
+        }
+        updateGestureRecognizerCount()
+    }
+    
+    @IBAction func changeRightBarItemsAsArray(_ sender: Any) {
+        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
+        for _ in 0..<100 {
+            navigationItem.rightBarButtonItems = [barButtonItem]
+        }
+        updateGestureRecognizerCount()
+    }
+    
+    @IBAction func changeRightBarItemsAsItem(_ sender: Any) {
+        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
         for _ in 0..<100 {
             navigationItem.rightBarButtonItem = barButtonItem
         }
         updateGestureRecognizerCount()
     }
     
+
     private func updateGestureRecognizerCount() {
         outputLabel.text = "\(navigationController?.navigationBar.recursiveGestureRecognizerCount() ?? 0)"
     }
