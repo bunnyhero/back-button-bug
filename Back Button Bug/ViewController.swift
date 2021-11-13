@@ -34,7 +34,10 @@ class ViewController: UIViewController {
         updateGestureRecognizerCount()
     }
     
-
+    @IBAction func printGestureRecognizers(_ sender: Any) {
+        navigationController?.navigationBar.printGestureRecognizersRecursively()
+    }
+    
     private func updateGestureRecognizerCount() {
         outputLabel.text = "\(navigationController?.navigationBar.recursiveGestureRecognizerCount() ?? 0)"
     }

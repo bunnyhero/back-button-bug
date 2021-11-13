@@ -14,4 +14,12 @@ extension UIView {
         let myCount = gestureRecognizers?.count ?? 0
         return subviews.reduce(myCount, { $0 + $1.recursiveGestureRecognizerCount() })
     }
+    
+    func printGestureRecognizersRecursively() {
+        if let gestureRecognizers = gestureRecognizers {
+            print("\(self)")
+            gestureRecognizers.forEach({ print("    \($0)") })
+        }
+        subviews.forEach({ $0.printGestureRecognizersRecursively() })
+    }
 }
