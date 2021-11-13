@@ -20,15 +20,7 @@ class ViewController: UIViewController {
         }
         updateGestureRecognizerCount()
     }
-    
-    @IBAction func changeRightBarItemsAsArray(_ sender: Any) {
-        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
-        for _ in 0..<100 {
-            navigationItem.rightBarButtonItems = [barButtonItem]
-        }
-        updateGestureRecognizerCount()
-    }
-    
+        
     @IBAction func changeRightBarItemsAsItem(_ sender: Any) {
         let barButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
         for _ in 0..<100 {
