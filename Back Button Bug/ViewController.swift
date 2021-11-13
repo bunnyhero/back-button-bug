@@ -14,6 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateGestureRecognizerCount()
+    }
+    
     @IBAction func changeTitle(_ sender: Any) {
         for i in 0..<100 {
             navigationItem.title = "Change \(i)"
