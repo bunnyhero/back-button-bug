@@ -12,11 +12,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateGestureRecognizerCount()
     }
 
     @IBAction func runTest(_ sender: Any) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+        updateGestureRecognizerCount()
+    }
+    
+    private func updateGestureRecognizerCount() {
+        outputLabel.text = "\(navigationController?.navigationBar.recursiveGestureRecognizerCount() ?? 0)"
     }
 }
 
