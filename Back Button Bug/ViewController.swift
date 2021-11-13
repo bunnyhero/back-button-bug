@@ -12,11 +12,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateGestureRecognizerCount()
     }
 
     @IBAction func runTest(_ sender: Any) {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+        for _ in 0..<100 {
+            navigationItem.rightBarButtonItem = barButtonItem
+        }
         updateGestureRecognizerCount()
     }
     
