@@ -1,7 +1,7 @@
 Description
 -----------
 
-On iOS 15+, modifying a view controller's `navigationItem` will append redundant `UIGestureRecognizer`s to the Back button. When the number of gesture recognizers gets into the thousands, tapping on the Back button can lock up the main thread for many seconds, which can result in the application being killed by the watchdog timer.
+On iOS 15+, modifying the appearance of the navigation bar, including modifying a view controller's `navigationItem`, will append redundant `UIGestureRecognizer`s to the Back button. When the number of gesture recognizers gets into the thousands, tapping on the Back button can lock up the main thread for many seconds, which can result in the application being killed by the watchdog timer.
 
 Steps to reproduce
 ------------------
@@ -17,6 +17,7 @@ Steps to reproduce
 - Gesture recognizer count remaining stable. Back button responsive. (This is what happens if you run the project on iOS 14.)
 
 ### Actual results
+
 - Gesture recognizer count climbs continuously on each change. If the total number is high enough (thousands), the Back button responds very slowly.
 
 Notes
