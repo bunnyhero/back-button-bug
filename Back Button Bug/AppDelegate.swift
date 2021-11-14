@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Self.swizzleAddGestureRecognizer()
         return true
     }
 
@@ -34,3 +35,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+private extension AppDelegate {
+    static func swizzleAddGestureRecognizer() {
+        guard
+            let originalMethod = class_getInstanceMethod(UIView.self, #selector(UIView.addGestureRecognizer(_:))),
+            let newMethod = class_getInstanceMethod(UIView.self, #selector(UIView.myAddGestureRecognizer(_:)))
+        else {
+            return
+        }
+        method_exchangeImplementations(originalMethod, newMethod)
+    }
+}
+
+extension UIView {
+    @objc func myAddGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) {
+        // Don't add so many tap gesture recognizers to back buttons
+        if accessibilityIdentifier == "BackButton" &&
+            gestureRecognizer is UITapGestureRecognizer &&
+            (gestureRecognizers?.count ?? 0) > 50 // Arbitrary maximum, set way high just in case
+        {
+            return
+        }
+        self.myAddGestureRecognizer(gestureRecognizer) // This calls the original, since they got swapped
+    }
+}
