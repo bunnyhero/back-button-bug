@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u7A-h8-MEc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u7A-h8-MEc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7xr-ir-I9O">
-                                <rect key="frame" x="79" y="383.5" width="256" height="183.5"/>
+                                <rect key="frame" x="66" y="364.5" width="282" height="221.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1r-Bm-BU7">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="41"/>
+                                        <rect key="frame" x="13" y="0.0" width="256" height="41"/>
                                         <string key="text">Number of UIGestureRecognizers
 on NavigationBar:</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -29,29 +29,37 @@ on NavigationBar:</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzj-dL-LXw">
-                                        <rect key="frame" x="123" y="49" width="10.5" height="20.5"/>
+                                        <rect key="frame" x="136" y="49" width="10.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APR-o4-NQG">
-                                        <rect key="frame" x="47" y="77.5" width="162" height="30"/>
+                                        <rect key="frame" x="78.5" y="77.5" width="125" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Change Title 100 Times"/>
+                                        <state key="normal" title="Change Title 100×"/>
                                         <connections>
                                             <action selector="changeTitle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iuw-aC-vF1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9o-WM-pfk">
-                                        <rect key="frame" x="13.5" y="115.5" width="229" height="30"/>
+                                        <rect key="frame" x="44.5" y="115.5" width="193" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Change Right Bar Item 100 Times"/>
+                                        <state key="normal" title="Change Right Bar Item 100×"/>
                                         <connections>
                                             <action selector="changeRightBarItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZXa-HZ-bF6"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGh-Sm-jXx">
+                                        <rect key="frame" x="0.0" y="153.5" width="282" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Change Navigation Bar Background 100×"/>
+                                        <connections>
+                                            <action selector="changeNavBarBackgroundImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PrF-Mu-S5v"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izG-yc-wBL">
-                                        <rect key="frame" x="0.0" y="153.5" width="256" height="30"/>
+                                        <rect key="frame" x="13" y="191.5" width="256" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Print Gesture Recognizers to Console"/>
                                         <connections>

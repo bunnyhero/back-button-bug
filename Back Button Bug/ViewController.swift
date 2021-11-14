@@ -34,6 +34,13 @@ class ViewController: UIViewController {
         updateGestureRecognizerCount()
     }
     
+    @IBAction func changeNavBarBackgroundImage(_ sender: Any) {
+        for _ in 0..<100 {
+            navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        }
+        updateGestureRecognizerCount()
+    }
+    
     @IBAction func printGestureRecognizers(_ sender: Any) {
         navigationController?.navigationBar.printGestureRecognizersRecursively()
     }
